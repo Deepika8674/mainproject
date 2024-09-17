@@ -1,0 +1,784 @@
+.*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Global Reset for Sizing Issues */
+* {
+    box-sizing: border-box;
+}
+
+/* Mobile Phones (up to 600px) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stamp-img {
+        width: 120px;
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    .hero-image img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .soll1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .branch3 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .branch5, .branch6 {
+        width: 100%;
+        height: auto;
+    }
+
+    .pap {
+        flex-direction: column;
+        padding: 20px;
+        transform: translate(0, 0);
+    }
+
+    .contact-section {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .pap1-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .testimonial-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .pagination .dot {
+        margin: 0 3px;
+    }
+}
+
+/* Tablets (600px to 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+    header {
+        padding: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero {
+        padding: 40px;
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.8rem;
+    }
+
+    .hero-image img {
+        width: 300px;
+    }
+
+    .branch3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .branch5, .branch6 {
+        width: 100%;
+        height: auto;
+    }
+
+    .pap {
+        padding: 40px;
+        transform: translate(0, -50px);
+    }
+
+    .contact-section {
+        position: relative;
+        width: 80%;
+        height: auto;
+        margin-top: 50px;
+    }
+
+    .pap1-container {
+        gap: 15px;
+    }
+
+    .testimonial-item {
+        width: 45%;
+    }
+
+    .pagination .dot {
+        margin: 0 5px;
+    }
+}
+
+/* Larger Desktops (1200px and up) */
+@media (min-width: 1200px) {
+    .hero {
+        padding: 70px;
+        flex-direction: row;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero p {
+        font-size: 2.5rem;
+    }
+
+    .branch3 {
+        flex-direction: row;
+    }
+
+    .branch5, .branch6 {
+        width: 48%;
+        height: 400px;
+    }
+
+    .pap {
+        padding: 120px;
+        transform: translate(-100px, -150px);
+    }
+
+    .contact-section {
+        width: 350px;
+        height: 450px;
+    }
+
+    .pap1-container {
+        gap: 20px;
+    }
+
+    .testimonial-item {
+        width: 30%;
+    }
+}
+
+
+
+
+
+
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(to right, #f8c291, #c56cf0);
+    color: white;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stamp {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Image */
+.stamp-img {
+    width: 150px; /* Adjust according to the logo size */
+    height: 50px; /* Adjust according to the logo size */
+    object-fit: contain; /* Keeps the logo's aspect ratio */
+    margin-right: 10px; /* Space between the logo and the "EduWell" text */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: white;
+}
+
+.hero .content {
+    max-width: 600px;
+}
+
+.hero p {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #ff6347;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #333;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff4500;
+}
+
+.hero-image img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.soll {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.soll h2 {
+    color: #999;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.soll h3 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-weight: normal;
+}
+
+.soll h3 span {
+    color: #e594fa;
+}
+
+.soll1 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.soll2 {
+    width: 200px;
+    text-align: center;
+}
+
+.soll2 img {
+    width: 96px;
+    height: 96px;
+}
+
+.soll2 h4 {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.soll2 p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #666;
+}
+
+
+.branch {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.branch1 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.branch2 h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.branch2 h2 span {
+    color: #e27ee6;
+}
+
+.branch2 p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.branch3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.branch4 {
+    width: 250px;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.branch-btn {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #e27ee6;
+    background-color: transparent;
+    color: #000;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.branch-btn:hover,
+.branch-btn.active {
+    background-color: #e27ee6;
+    color: #fff;
+}
+
+.branch5 {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    flex: 1;
+    background-color: #f7f8fa;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow to the contact section */
+    width: 350px; /* Fixed width for the contact section */
+    height: 300px;
+}
+
+.branch6 {
+    width: 350px;
+    height: 300px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.branch6 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.branch-price {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e27ee6;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+.branch-info {
+    width: 48%;
+    text-align: left;
+}
+
+.branch-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.branch-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.branch-info a {
+    color: lightpink;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 1rem;
+    color: #777;
+}
+
+.branch-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #e27ee6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+.leaf {
+    display: flex;
+    background: url('./image21.png') no-repeat center center/cover; /* Background image */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.leaf-section img {
+    position: absolute;
+    left: 250px; /* Adjust this value to move the image some right */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px; /* Adjust as needed */
+    height: auto;
+}
+
+.leaf1-section {
+    margin-left: 450px; /* Adjust to provide space between the image and the text */
+    color: white;
+    text-align: left;
+}
+
+.leaf2-text {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.leaf3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:white;
+    color:lightpink;
+    border-color: lightpink;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color:lightpink;
+    border-color: lightpink;
+    color: white;
+}
+
+
+.testimonials {
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+.tag {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+h2 span {
+    color: #e27ee6;
+}
+
+.testimonials-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+
+.testimonial-item {
+    background-color: #fff;
+    padding: 20px;
+    width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-item p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+.testimonial-item h4, .testimonial-item .position {
+    position: relative;
+    text-align: left;
+}
+
+.testimonial-item h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.testimonial-item .position {
+    color:#e27ee6 ;
+    font-weight: bold;
+}
+
+
+.tag-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: url('./image27.png') no-repeat;
+    background-size: contain;
+    opacity: 0.6;
+}
+
+
+/* Pagination dots (optional) */
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.pagination .dot:hover {
+    background-color: #e27ee6;
+    opacity: 0.8;
+}
+
+
+
+.pap {
+    padding:120px;
+    display: flex;
+    justify-content: center; /* Centers the map and contact section horizontally */
+    align-items: flex-start;
+    position: relative; /* Allows child elements to use absolute positioning */
+    max-width: 1200px;
+    z-index: 1;
+    margin: 0 auto;
+    height: auto; /* Adjust height according to the content */
+    transform: translate(-80px, -150px); /* Moves the container slightly left and up */
+}
+
+.map-section {
+    width: 700px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow to the map */
+    position: relative; /* Ensures the map stays in normal flow */
+}
+
+
+
+
+
+
+
+.contact-section {
+    flex: 1;
+    background-color: #f7f8fa;
+    padding: 20px;
+    top: 150px;
+    right: 0px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow to the contact section */
+    position: relative; /* Allows it to overlap the map */
+     /* top: 50px;Adjusts how much the contact section overlaps vertically */
+    /*  right: -350px; Moves the contact section slightly over the map section horizontally
+    z-index: 2; /* Ensures the contact section appears above the map */
+    width: 350px; /* Fixed width for the contact section */
+    height: 400px; /* Increased height of the contact section */
+    Z: INDEX 1000px;
+}
+
+.pap-container{
+    /* top:140px; */
+    /* bottom:150px; */
+    /* bottom: 0; */
+    position:relative;
+    top: -600px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    /*z-index: 0;
+}
+
+.bottom-image{
+    /* bottom:40%; */
+    width: 100%;
+    height: auto;
+}
+
+
+
+.pap1-container {
+    position: relative;
+    /*top: -45rem;
+    bottom: 10px; /* Adjust this to control the vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between logos */
+    /*z-index: 1; /* Ensure logos are above the image */
+}
+
+
+.pap1-container img {
+    width: 50px; /* Size of the logos */
+    height: auto;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #5a20d0;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #5a20d0;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4515a0;
+}
